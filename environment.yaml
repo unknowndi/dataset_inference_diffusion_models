@@ -1,4 +1,4 @@
-name: test_ldm
+name: cdi
 channels:
   - pytorch
   - defaults

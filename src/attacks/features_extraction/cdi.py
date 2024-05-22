@@ -6,7 +6,7 @@ import numpy as np
 from typing import Tuple
 
 
-class CombinationAttackExtractor(FeatureExtractor):
+class CDIExtractor(FeatureExtractor):
     def load_data(self, attack: str, folder: str) -> Tuple[T, T]:
         """
         Load the data from the file

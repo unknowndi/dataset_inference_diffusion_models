@@ -6,7 +6,7 @@ from torch import Tensor as T
 from typing import Tuple
 
 
-class AutoEncReconLossThresholdComputer(ScoreComputer):
+class DenoisingLossComputer(ScoreComputer):
     def process_data(self, members: T, nonmembers: T) -> Tuple[T, T]:
         """
         Compute scores

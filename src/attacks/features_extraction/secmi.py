@@ -62,22 +62,3 @@ class SecMIExtractor(FeatureExtractor):
             [z_det.detach().cpu().unsqueeze(1), z_step.detach().cpu().unsqueeze(1)],
             dim=1,
         )  # B, 2, C, H, W
-
-    def process_data(self) -> Tuple[T, T]:
-        second_attack = (
-            "secmi_nn" if self.attack_cfg.name == "secmi_stat" else "secmi_stat"
-        )
-        path = os.path.join(
-            *self.path_out.split("/")[:-1],
-            f"{self.model_cfg.name}_{second_attack}_{self.config.run_id}.npz",
-        )
-        try:
-            data = np.load(path, allow_pickle=True)
-            print(f"Reading pre-computed features from {second_attack} attack, {path=}")
-            return torch.from_numpy(data["members"]), torch.from_numpy(
-                data["nonmembers"]
-            )
-        except FileNotFoundError:
-            pass
-        print(f"Computing features for {self.attack_cfg.name} attack")
-        return super().process_data()

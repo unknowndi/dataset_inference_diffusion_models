@@ -14,7 +14,7 @@ classifiers = {
 }
 
 
-class CombinationAttackComputer(ScoreComputer):
+class CDIComputer(ScoreComputer):
     def fit_clf(self, train_dataset: MIDataset, seed: int):
         clf = classifiers[self.attack_cfg.clf](
             random_state=seed, **self.attack_cfg.kwargs

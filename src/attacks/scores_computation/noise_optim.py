@@ -1,3 +1,3 @@
-from src.attacks.scores_computation.combination_attack import CombinationAttackComputer
+from src.attacks.scores_computation.cdi import CDIComputer
 
-NoiseOptimComputer = CombinationAttackComputer
+NoiseOptimComputer = CDIComputer
