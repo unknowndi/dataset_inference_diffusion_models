@@ -49,6 +49,13 @@ gdown https://drive.google.com/drive/folders/143b1wF1iWEU2DASTk-sfTRwW7KiEC3IX?u
 
 * MS-COCO: Download COCO 2014 [training](http://images.cocodataset.org/zips/train2014.zip), [validation](http://images.cocodataset.org/zips/val2014.zip) data and [annotations](http://images.cocodataset.org/annotations/annotations_trainval2014.zip). Then extract annotations features according to `helper_scripts/uvit_extract_embeddings.py`. 
 
+### Initializing submodules
+
+```
+git submodules init
+git submodules update
+```
+
 ## General structure
 
 The following is the summary of the structure of this codebase, as well as short manual on how to use & build ontop of it.
