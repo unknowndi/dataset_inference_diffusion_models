@@ -1,0 +1,12 @@
+[submodule "latent-diffusion"]
+	path = latent-diffusion
+	url = https://github.com/CompVis/latent-diffusion.git
+[submodule "DiT"]
+	path = DiT
+	url = https://github.com/facebookresearch/DiT.git
+[submodule "U-ViT"]
+	path = U-ViT
+	url = https://github.com/baofff/U-ViT.git
+[submodule "SecMI"]
+	path = SecMI
+	url = https://github.com/jinhaoduan/SecMI.git
